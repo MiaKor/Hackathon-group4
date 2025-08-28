@@ -1,7 +1,10 @@
+import donate_amuta
+import donate_groc_amuta
 import main
 import pygame
 import sys
 import org
+import vol_type
 from button import Button
 import donator
 
@@ -42,10 +45,10 @@ def donation_choice():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if donation_button.checkForInput(MENU_MOUSE_POS):
-                    pass
+                    donate_amuta.donate_amuta()
                 if volunteer_button.checkForInput(MENU_MOUSE_POS):
-                    pass
+                    vol_type.vol_type()
                 if contr_button.checkForInput(MENU_MOUSE_POS):
-                    pass
+                    donate_groc_amuta.donate_groc_amuta()
 
         pygame.display.update()

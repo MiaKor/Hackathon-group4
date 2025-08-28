@@ -5,7 +5,8 @@ import org
 from button import Button
 import donator
 
-def donate_amuta ():
+
+def donate_groc_amuta():
     while True:
         main.SCREEN.blit(main.BG, (0, 0))
 
@@ -16,13 +17,9 @@ def donate_amuta ():
 
         main.SCREEN.blit(MENU_TEXT, MENU_RECT)
 
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
 
-
         pygame.display.update()
-
-
