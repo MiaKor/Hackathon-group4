@@ -14,12 +14,12 @@ def amuta(name, my_data):
 
         for k in i:
 
-            draw_message(k, 40, "black", location)
+            draw_message(k, 40, "white", location)
 
             location = (location[0] + 200, location[1])
 
             if i.index(k) == len(i) - 1:
-                location = (location[0], location[1] + 200)
+                location = (location[0], location[1] +60)
 
 
 my_name = "hello"
