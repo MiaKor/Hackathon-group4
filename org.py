@@ -11,6 +11,7 @@ pygame.init()
 
 
 def org():
+    num=0
     while True:
 
         OPTIONS_MOUSE_POS = pygame.mouse.get_pos()
@@ -43,7 +44,7 @@ def org():
 
         org_back.update(main.SCREEN)
 
-        num = 0
+        tree.tree(num)
 
         for button in [org_back, org_enter]:
             button.changeColor(OPTIONS_MOUSE_POS)
@@ -62,5 +63,6 @@ def org():
                     main.main_menu()
                 if org_enter.checkForInput(OPTIONS_MOUSE_POS):
                     num+=1
-                    tree.tree(num)
+                    if num>3:
+                        num==0
         pygame.display.update()
