@@ -31,6 +31,7 @@ db = {
             "type": "money",
             "donors": [],
             "donations": []
+
         },
         "WIZO Rishon LeZion": {
             "phone": "03-6227420",
