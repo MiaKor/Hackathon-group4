@@ -1,12 +1,11 @@
 import sys
-
 import main
-
 import pygame
 
+import tree
 from button import Button
-
 from amuta import amuta
+from main import SCREEN
 
 pygame.init()
 
@@ -33,14 +32,22 @@ def org():
         amuta(my_name, my_data)
 
         org_back = Button(image=None, pos=(640, 460),
-
                           text_input="BACK", font=main.get_font(75),
-
                           base_color="Black", hovering_color="Green")
+        org_enter = Button(image=None, pos=(600, 100),
+                          text_input="enter", font=main.get_font(75),
+                          base_color="Black", hovering_color="Green")
+
 
         org_back.changeColor(OPTIONS_MOUSE_POS)
 
         org_back.update(main.SCREEN)
+
+        num = 0
+
+        for button in [org_back, org_enter]:
+            button.changeColor(OPTIONS_MOUSE_POS)
+            button.update(main.SCREEN)
 
         for event in pygame.event.get():
 
@@ -53,5 +60,7 @@ def org():
 
                 if org_back.checkForInput(OPTIONS_MOUSE_POS):
                     main.main_menu()
-
+                if org_enter.checkForInput(OPTIONS_MOUSE_POS):
+                    num+=1
+                    tree.tree(num)
         pygame.display.update()
