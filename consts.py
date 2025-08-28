@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 ASSETS_DIR = BASE_DIR / "assets"
-DB_PATH = BASE_DIR / "donations.sqlite3"
+# DB_PATH = BASE_DIR / "donations.sqlite3"
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 1280, 720
 CAPTION = "Donation Tree"
