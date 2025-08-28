@@ -15,8 +15,10 @@ def org():
     while True:
 
         OPTIONS_MOUSE_POS = pygame.mouse.get_pos()
+        BG = pygame.image.load("assets/Background1.jpg")
+        BG = pygame.transform.scale(BG, (1280, 720))
+        SCREEN.blit(BG, (0, 0))
 
-        main.SCREEN.fill("white")
 
         # org_text = main.get_font(45).render("This is a blank screen.", True,
 
@@ -34,10 +36,10 @@ def org():
 
         org_back = Button(image=None, pos=(640, 460),
                           text_input="BACK", font=main.get_font(75),
-                          base_color="Black", hovering_color="Green")
+                          base_color="white", hovering_color="Green")
         org_enter = Button(image=None, pos=(600, 100),
                           text_input="enter", font=main.get_font(75),
-                          base_color="Black", hovering_color="Green")
+                          base_color="white", hovering_color="Green")
 
 
         org_back.changeColor(OPTIONS_MOUSE_POS)
